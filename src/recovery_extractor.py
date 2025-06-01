@@ -115,7 +115,7 @@ class RecoveryExtractor:
         page.window.height = 265
         page.padding = 20
 
-        # → campo de texto que armazena o(s) path(s) das planilhas
+        # campo de texto que armazena os paths das planilhas
         self.txt_path = ft.TextField(
             label="Selecionar Planilhas:",
             expand=True,
@@ -136,7 +136,6 @@ class RecoveryExtractor:
         btn_carregar = ft.ElevatedButton(text="Carregar", expand=True, height=50)
         btn_load = ft.ElevatedButton(text="Carregar dados em JSON", expand=True, height=40)
 
-        # → primeira “página” (sem campos para cabeçalhos ainda)
         self.initial_page = ft.Column(
             [
                 ft.Row(
@@ -156,11 +155,9 @@ class RecoveryExtractor:
             expand=True,
         )
 
-        # → segunda “página”, inicialmente vazia
         self.after_file_selected = ft.Column([], expand=True, visible=False)
         self.sheet_containers = []
 
-        # callback quando clica em “Carregar” (vai gerar campos de cabeçalhos/linhas)
         def switch_page(e: ft.ControlEvent):
             if not self.txt_path.value:
                 self.txt_path.border_color = ft.Colors.RED
@@ -212,7 +209,6 @@ class RecoveryExtractor:
 
         btn_carregar.on_click = switch_page
 
-        # callback quando clica em “Carregar dados em JSON”
         def on_load(e: ft.ControlEvent):
             # valida todos os campos de cada container
             for idx, sheet in enumerate(self.sheet_containers):
