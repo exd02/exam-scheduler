@@ -91,17 +91,5 @@ Este repositório contém três módulos principais que, em conjunto, permitem:
 
 2. Na raiz do projeto (onde está a pasta `src/`), execute:  
    ```bash
-   python -m src.app
-   ```  
-   ou  
-   ```bash
    python src/app.py
    ```
-
-    3. Um menu aparecerá no terminal:  
-    ```bash
-    1 → Construir AlunosEmRecuperacao.json (GUI)
-    2 → Agendar Exames em Sala (GUI)
-    3 → Construir planilhas de horário (Excel)
-    ```
-
