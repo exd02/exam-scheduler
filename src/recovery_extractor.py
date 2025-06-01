@@ -262,10 +262,10 @@ class RecoveryExtractor:
                 firstRow = int(sheet.txt_fields[1].value)
                 lastRow = int(sheet.txt_fields[2].value)
                 jsons.append(
-                    extract_operations.extract_json(paths[idx], headers, firstRow, lastRow)
+                    extract_json(paths[idx], headers, firstRow, lastRow)
                 )
 
-            merged = extract_operations.merge_jsons(jsons)
+            merged = merge_jsons(jsons)
             # grava no arquivo fixo “AlunosEmRecuperacao.json” na raiz de dados
             output_file = "dados/AlunosEmRecuperacao.json"
             with open(output_file, "w", encoding="utf-8") as f:
