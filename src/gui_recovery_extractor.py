@@ -10,12 +10,12 @@ GREY_C = "#2A2D33"
 HEADER_RE = re.compile(r'^[A-Z]+(?:,[A-Z]+)*$')
 
 
-class RecoveryExtractor:
+class GUIRecoveryExtractor:
     """
-    Classe que encapsula a interface Flet para:
-    - permitir upload de uma ou mais planilhas .xlsx
-    - solicitar ao usuário quais colunas (cabeçalhos) e linhas inicial/final
-    - extrair, mesclar e salvar o AlunosEmRecuperacao.json
+    Interface Flet para extrair e mesclar planilhas .xlsx de alunos em recuperação:
+    - Permite selecionar múltiplos arquivos .xlsx
+    - Solicita cabeçalhos e linhas inicial/final
+    - Cria ou sobrescreve 'dados/AlunosEmRecuperacao.json'
     """
 
     def __init__(self):
@@ -31,18 +31,63 @@ class RecoveryExtractor:
 
     def save(self, output_file: str, merged: dict[str, any]):
         with open(output_file, "w", encoding="utf-8") as f:
-            json.dump(merged, f, ensure_ascii=False, indent=2)
+            json.dump(merged, f, ensure_ascii=False, indent=4)
 
         self.page.open(
             ft.SnackBar(ft.Text(f"Exportado '{output_file}' com sucesso!"), bgcolor=ft.Colors.GREEN_100)
         )
 
+    def _confirm_and_save(self, page: ft.Page, output_file: str, merged: dict):
+        """
+        Se output_file existir:
+          - exibe diálogo de confirmação
+          - se "Sim", chama save() e exibe SnackBar
+          - se "Não", fecha diálogo
+        Se output_file não existir:
+          - chama save() diretamente e exibe SnackBar
+        """
+        def _show_success_snackbar(msg: str):
+            page.open(ft.SnackBar(ft.Text(msg), bgcolor=ft.Colors.GREEN_100))
+
+        if Path(output_file).exists():
+            def _overwrite(e: ft.ControlEvent):
+                self.save(output_file, merged)
+                dlg.open = False
+                page.update()
+                _show_success_snackbar(f"'{output_file}' sobrescrito com sucesso!")
+
+            dlg = ft.AlertDialog(
+                modal=True,
+                title=ft.Text("Confirmação"),
+                content=ft.Text(
+                    f'Você tem certeza que quer sobrescrever o arquivo "{output_file}" já existente?'
+                ),
+                actions=[
+                    ft.TextButton("Sim", on_click=_overwrite),
+                    ft.TextButton(
+                        "Não",
+                        on_click=lambda e: (
+                            setattr(dlg, "open", False),
+                            page.update()
+                        )
+                    ),
+                ],
+                actions_alignment=ft.MainAxisAlignment.END,
+            )
+
+            page.open(dlg)
+        else:
+            self.save(output_file, merged)
+            _show_success_snackbar(f"Exportado '{output_file}' com sucesso!")
+
+        page.update()
+
     def make_sheet_info(self, filename: str) -> ft.Container:
         """
-        Monta o container que pergunta:
-        - colunas de cabeçalho (texto, ex: “A,B,C”)
-        - linha inicial do primeiro aluno
-        - linha final do último aluno
+        Monta o container que solicita:
+        - cabeçalhos (ex: "A,B,C")
+        - linha inicial
+        - linha final
         """
         txt_headers = ft.TextField(
             value="F,J,N,R,V,Z,AD,AH,AL,AP,AT,AX,BB,BF,BJ",
@@ -89,25 +134,16 @@ class RecoveryExtractor:
             border_radius=5,
             expand=True,
         )
-        # armazenamos os três TextFields para validação depois:
         container.txt_fields = [txt_headers, txt_first, txt_last]
         return container
 
     def _on_file_result(self, e: ft.FilePickerResultEvent):
         if e.files:
-            # retorna uma lista de caminhos, separados por vírgula
             self.txt_path.value = ", ".join(f.path for f in e.files)
             self.txt_path.border_color = ft.Colors.BLUE_800
             self.page.update()
 
     def _build_ui(self, page: ft.Page):
-        """
-        Constrói as duas “páginas” da interface:
-        1) initial_page: campo para selecionar planilhas e botão “Carregar”,
-           que vai mostrar os containers para cabeçalhos/linhas.
-        2) after_file_selected: depois que o usuário clica em “Carregar”,
-           ele vê um container por planilha + botão “Carregar dados em JSON”.
-        """
         self.page = page
         page.title = "Extrator JSON de Alunos em Recuperação"
         page.theme_mode = "dark"
@@ -115,7 +151,6 @@ class RecoveryExtractor:
         page.window.height = 265
         page.padding = 20
 
-        # campo de texto que armazena os paths das planilhas
         self.txt_path = ft.TextField(
             label="Selecionar Planilhas:",
             expand=True,
@@ -171,14 +206,15 @@ class RecoveryExtractor:
             if any(not p.lower().endswith(".xlsx") for p in paths):
                 self.txt_path.border_color = ft.Colors.YELLOW
                 page.open(
-                    ft.SnackBar(ft.Text("Selecione as planilhas no formato .xlsx!"), bgcolor=ft.Colors.YELLOW_100)
+                    ft.SnackBar(
+                        ft.Text("Selecione as planilhas no formato .xlsx!"),
+                        bgcolor=ft.Colors.YELLOW_100
+                    )
                 )
                 page.update()
                 return
 
-            # limpa containers antigos, se houver
             self.sheet_containers.clear()
-
             controls: list = [
                 ft.Row(
                     [
@@ -193,7 +229,6 @@ class RecoveryExtractor:
                 ft.Divider(thickness=1),
             ]
 
-            # para cada caminho, cria um container pedindo cabeçalhos/linhas
             for p in paths:
                 c = self.make_sheet_info(os.path.basename(p))
                 self.sheet_containers.append(c)
@@ -210,99 +245,68 @@ class RecoveryExtractor:
         btn_carregar.on_click = switch_page
 
         def on_load(e: ft.ControlEvent):
-            # valida todos os campos de cada container
-            for idx, sheet in enumerate(self.sheet_containers):
+            for sheet in self.sheet_containers:
                 headers_tf, first_tf, last_tf = sheet.txt_fields
-                # 1) nenhum campo pode ficar vazio
                 if not headers_tf.value.strip() or not first_tf.value.strip() or not last_tf.value.strip():
                     for tf in sheet.txt_fields:
                         if not tf.value.strip():
                             tf.border_color = ft.Colors.RED
-                    page.open(ft.SnackBar(ft.Text("Por favor, preencha todos os dados!"), bgcolor=ft.Colors.RED_100))
+                    page.open(
+                        ft.SnackBar(
+                            ft.Text("Por favor, preencha todos os dados!"),
+                            bgcolor=ft.Colors.RED_100
+                        )
+                    )
                     page.update()
                     return
 
-                # 2) valida formato de cabeçalhos (apenas maiúsculas separadas por vírgula)
                 if not HEADER_RE.match(headers_tf.value.strip()):
                     headers_tf.border_color = ft.Colors.YELLOW
                     page.open(
                         ft.SnackBar(
                             ft.Text("Cabeçalhos inválidos! Apenas letras maiúsculas separadas por vírgula."),
-                            bgcolor=ft.Colors.YELLOW_100,
+                            bgcolor=ft.Colors.YELLOW_100
                         )
                     )
                     page.update()
                     return
 
-                # 3) valida linha inicial
                 val1 = first_tf.value.strip()
                 if not val1.isdigit() or int(val1) <= 0:
                     first_tf.border_color = ft.Colors.YELLOW
                     page.open(
                         ft.SnackBar(
-                            ft.Text("Linha primeiro Aluno deve ser inteiro > 0!"), bgcolor=ft.Colors.YELLOW_100
+                            ft.Text("Linha primeiro Aluno deve ser inteiro > 0!"),
+                            bgcolor=ft.Colors.YELLOW_100
                         )
                     )
                     page.update()
                     return
 
-                # 4) valida linha final
                 val2 = last_tf.value.strip()
                 if not val2.isdigit() or int(val2) <= int(val1):
                     last_tf.border_color = ft.Colors.YELLOW
                     page.open(
                         ft.SnackBar(
-                            ft.Text("Linha último Aluno deve ser inteiro > primeiro!"), bgcolor=ft.Colors.YELLOW_100
+                            ft.Text("Linha último Aluno deve ser inteiro > primeiro!"),
+                            bgcolor=ft.Colors.YELLOW_100
                         )
                     )
                     page.update()
                     return
 
-            # se tudo válido, inicia a extração e mescla
             paths = [p.strip() for p in self.txt_path.value.split(",")]
             jsons: list[dict] = []
             for idx, sheet in enumerate(self.sheet_containers):
                 headers = sheet.txt_fields[0].value
                 firstRow = int(sheet.txt_fields[1].value)
                 lastRow = int(sheet.txt_fields[2].value)
-                jsons.append(
-                    extract_json(paths[idx], headers, firstRow, lastRow)
-                )
+                jsons.append(extract_json(paths[idx], headers, firstRow, lastRow))
 
-            # grava no arquivo fixo “AlunosEmRecuperacao.json” na raiz de dados
             output_file = "dados/AlunosEmRecuperacao.json"
             merged = merge_jsons(jsons)
 
-            if Path(output_file).exists():
-                def overwrite(e: ft.ControlEvent):
-                    self.save(output_file, merged)
-                    dlg_modal.open = False
-                    page.update()
-                    page.open(ft.SnackBar(
-                        ft.Text(f"'{output_file}' sobrescrito com sucesso!"),
-                        bgcolor=ft.Colors.GREEN_100
-                    ))
-                
-                dlg_modal = ft.AlertDialog(
-                    modal=True,
-                    title=ft.Text("Confirmação"),
-                    content=ft.Text("Você tem certeza quer sobrescrever o arquivo \"dados/AlunosEmRecuperacao.json\" já existente?"),
-                    actions=[
-                        ft.TextButton("Sim", on_click=overwrite),
-                        ft.TextButton("Não", on_click=lambda e: page.close(dlg_modal)),
-                    ],
-                    actions_alignment=ft.MainAxisAlignment.END,
-                    on_dismiss=lambda e: print("Modal dialog dismissed!"),
-                )
-                page.open(dlg_modal)
-            else:
-                self.save(output_file, merged)
-                page.open(ft.SnackBar(
-                    ft.Text(f"Exportado '{output_file}' com sucesso!"),
-                    bgcolor=ft.Colors.GREEN_100
-                ))
-
-            page.update()
+            self._confirm_and_save(page, output_file, merged)
 
         btn_load.on_click = on_load
 

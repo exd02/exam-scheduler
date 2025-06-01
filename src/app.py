@@ -1,18 +1,17 @@
-# src/app.py
-
 from pathlib import Path
 
 from src.data_loader import DataLoader
 from src.scheduler import Scheduler
 from src.excel_exporter import ExcelExporter
-from src.recovery_extractor import RecoveryExtractor
+from src.gui_recovery_extractor import GUIRecoveryExtractor
+from src.gui_scheduler import GUIScheduler
 
 
 def run_scheduling():
     """
-    Carrega todos os JSONs de 'dados/' → monta o modelo CP-SAT → gera as planilhas na pasta 'planilhas/'.
+    Carrega todos os JSONs de 'dados/' → monta o modelo CP-SAT →
+    gera as planilhas em 'planilhas/'.
     """
-
     base_path = Path(__file__).parent.parent / "dados"
     loader = DataLoader(base_path)
 
@@ -42,20 +41,22 @@ def run_scheduling():
 
 def main():
     print("==============================================")
-    print("  1 → Construir AlunosEmRecuperacao.json        ")
-    print("  3 → Construir planilhas de horário (Excel)    ")
+    print("  1 → Construir AlunosEmRecuperacao.json (GUI)")
+    print("  2 → Agendar Exames em Sala (GUI)")
+    print("  3 → Construir planilhas de horário (Excel)")
     print("==============================================")
-    choice = input("Digite 1 ou 3 e pressione Enter: ").strip()
+    choice = input("Digite 1, 2 ou 3 e pressione Enter: ").strip()
 
     if choice == "1":
-        # dispara interface Flet para extrair AlunosEmRecuperacao.json
-        extractor = RecoveryExtractor()
-        extractor.run()
+        gui_recovery = GUIRecoveryExtractor()
+        gui_recovery.run()
+    elif choice == "2":
+        gui_scheduler = GUIScheduler()
+        gui_scheduler.run()
     elif choice == "3":
-        # executa pipeline de agendamento e exporta Excel
         run_scheduling()
     else:
-        print("Opção inválida. Rode novamente e digite '1' ou '3'.")
+        print("Opção inválida. Rode novamente e digite '1', '2' ou '3'.")
 
 
 if __name__ == "__main__":
