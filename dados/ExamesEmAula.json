@@ -1,0 +1,33 @@
+{
+    "Agropecuaria": {
+        "biologia_i": [
+            0
+        ]
+    },
+    "Alimentos": {
+        "biologia_i": [
+            0
+        ]
+    },
+    "Informatica": {
+        "biologia_i": [
+            12
+        ]
+    },
+    "MeioAmbiente": {
+        "biologia_i": [
+            6
+        ]
+    },
+    "Quimica": {
+        "biologia_i": [
+            33
+        ],
+        "tec_bas_lab": [
+            3
+        ],
+        "lingua_portuguesa_i": [
+            5
+        ]
+    }
+}

@@ -1,0 +1,314 @@
+{
+    "Agropecuaria": {
+        "seg": [
+            "biologia_i",
+            "biologia_i",
+            "lingua_portuguesa_i",
+            "lingua_portuguesa_i",
+            0,
+            "quimica_i",
+            "matematica_i",
+            "matematica_i"
+        ],
+        "ter": [
+            "lingua_portuguesa_i",
+            "filosofia_i",
+            "matematica_i",
+            "quimica_i",
+            "geodesia_e_construcoes_rurais",
+            "geodesia_e_construcoes_rurais",
+            0,
+            0
+        ],
+        "qua": [
+            "geografia_i",
+            "agricultura",
+            "agricultura",
+            "agricultura",
+            0,
+            0,
+            0,
+            0
+        ],
+        "qui": [
+            "introduçao_aos_estudos_de_agropecuaria",
+            "introduçao_aos_estudos_de_agropecuaria",
+            "fisica_i",
+            "sociologia_i",
+            "ingles_i",
+            "laboratorio_de_ciencias_exatas",
+            0,
+            0
+        ],
+        "sex": [
+            "geografia_i",
+            "fisica_i",
+            "educacao_fisica_i",
+            "educacao_fisica_i",
+            "historia_i",
+            "historia_i",
+            0,
+            0
+        ]
+    },
+    "Alimentos": {
+        "seg": [
+            "biologia_i",
+            "biologia_i",
+            "quimica_i",
+            "filosofia_i",
+            "lingua_portuguesa_i",
+            "inst_e_equip",
+            "matematica_i",
+            "matematica_i"
+        ],
+        "ter": [
+            "quimica_e_bioqu",
+            "quimica_e_bioqu",
+            "quimica_i",
+            "geografia_i",
+            "lingua_portuguesa_i",
+            "lingua_portuguesa_i",
+            0,
+            0
+        ],
+        "qua": [
+            "microb_geral",
+            "microb_geral",
+            "praticas_agro",
+            "praticas_agro",
+            0,
+            0,
+            0,
+            0
+        ],
+        "qui": [
+            "ingles_i",
+            "sociologia_i",
+            "matematica_i",
+            "laboratorio_de_ciencias_exatas",
+            "historia_i",
+            "historia_i",
+            0,
+            0
+        ],
+        "sex": [
+            "ind_tecn_ali",
+            "ind_tecn_ali",
+            "artes",
+            "geografia_i",
+            "fisica_i",
+            "fisica_i",
+            "educacao_fisica_i",
+            "educacao_fisica_i"
+        ]
+    },
+    "Informatica": {
+        "seg": [
+            "quimica_i",
+            "sociologia_i",
+            "banco_de_dados",
+            "banco_de_dados",
+            "matematica_i",
+            "matematica_i",
+            "programacao_web",
+            "programacao_web"
+        ],
+        "ter": [
+            "filosofia_i",
+            "fisica_i",
+            "lingua_portuguesa_i",
+            "lingua_portuguesa_i",
+            "biologia_i",
+            "biologia_i",
+            "ingles_i",
+            0
+        ],
+        "qua": [
+            "quimica_i",
+            "ingles_i",
+            "geografia_i",
+            "lingua_portuguesa_i",
+            0,
+            0,
+            0,
+            0
+        ],
+        "qui": [
+            "laboratorio_de_ciencias_exatas",
+            "matematica_i",
+            "educacao_fisica_i",
+            "educacao_fisica_i",
+            "geografia_i",
+            "fisica_i",
+            0,
+            0
+        ],
+        "sex": [
+            "historia_i",
+            "historia_i",
+            "montagem_e_manutençao_so",
+            "montagem_e_manutençao_so",
+            "introduçao_a_algoritmos",
+            "introduçao_a_algoritmos",
+            "introduçao_a_algoritmos",
+            "introduçao_a_algoritmos"
+        ]
+    },
+    "MeioAmbiente": {
+        "seg": [
+            "inf_bas",
+            "inf_bas",
+            "matematica_i",
+            "matematica_i",
+            "quimica_i",
+            "filosofia_i",
+            "biologia_i",
+            "biologia_i"
+        ],
+        "ter": [
+            "ingles_i",
+            "lingua_portuguesa_i",
+            "educacao_fisica_i",
+            "educacao_fisica_i",
+            "solos",
+            "solos",
+            0,
+            0
+        ],
+        "qua": [
+            "lingua_portuguesa_i",
+            "quimica_i",
+            "lingua_portuguesa_i",
+            "sociologia_i",
+            0,
+            0,
+            0,
+            0
+        ],
+        "qui": [
+            "matematica_i",
+            "laboratorio_de_ciencias_exatas",
+            "historia_i",
+            "historia_i",
+            "bio_conser",
+            "bio_conser",
+            0,
+            0
+        ],
+        "sex": [
+            "fisica_i",
+            "geografia_i",
+            "geografia_i",
+            "fisica_i",
+            "perfil_prof",
+            "perfil_prof",
+            0,
+            0
+        ]
+    },
+    "Quimica": {
+        "seg": [
+            "tec_bas_lab",
+            "tec_bas_lab",
+            "tec_bas_lab",
+            "tec_bas_lab",
+            0,
+            "lingua_portuguesa_i",
+            "educacao_fisica_i",
+            "educacao_fisica_i"
+        ],
+        "ter": [
+            "matematica_i",
+            "matematica_i",
+            "fisica_i",
+            "fisica_i",
+            "quimica_inorg",
+            "quimica_inorg",
+            "toxicol_st",
+            0
+        ],
+        "qua": [
+            "filosofia_i",
+            "sociologia_i",
+            "quimica_inorg",
+            "trat_de_agua",
+            0,
+            0,
+            0,
+            0
+        ],
+        "qui": [
+            "geografia_i",
+            "geografia_i",
+            "quimica_i",
+            "quimica_i",
+            "matematica_i",
+            "matematica_i",
+            0,
+            0
+        ],
+        "sex": [
+            "biologia_i",
+            "biologia_i",
+            "historia_i",
+            "historia_i",
+            "lab_prod_textos_tecnicos",
+            "artes",
+            "lingua_portuguesa_i",
+            "lingua_portuguesa_i"
+        ]
+    },
+    "Zootecnia": {
+        "seg": [
+            "sociologia_i",
+            "quimica_i",
+            "educacao_fisica_i",
+            "educacao_fisica_i",
+            "matematica_i",
+            "matematica_i",
+            "lingua_portuguesa_i",
+            "lingua_portuguesa_i"
+        ],
+        "ter": [
+            "quimica_i",
+            "biologia_i",
+            "biologia_i",
+            "matematica_i",
+            "fisica_i",
+            "fisica_i",
+            0,
+            0
+        ],
+        "qua": [
+            "equi_cap_oni",
+            "equi_cap_oni",
+            "ingles_i",
+            "filosofia_i",
+            0,
+            0,
+            0,
+            0
+        ],
+        "qui": [
+            "intro_zoo",
+            "intro_zoo",
+            "cunic_apicultura",
+            "cunic_apicultura",
+            "laboratorio_de_ciencias_exatas",
+            "geografia_i",
+            0,
+            0
+        ],
+        "sex": [
+            "geografia_i",
+            "fert_solo",
+            "fert_solo",
+            "fert_solo",
+            "artes",
+            "lingua_portuguesa_i",
+            "historia_i",
+            "historia_i"
+        ]
+    }
+}

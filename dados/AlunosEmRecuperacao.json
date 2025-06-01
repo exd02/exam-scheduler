@@ -1,0 +1,936 @@
+{
+  "Agropecuaria": {
+    "0": [
+      "quimica_i",
+      "fisica_i",
+      "ingles_i"
+    ],
+    "1": [
+      "quimica_i"
+    ],
+    "2": [
+      "quimica_i",
+      "fisica_i"
+    ],
+    "3": [
+      "geodesia_e_construcoes_rurais",
+      "matematica_i",
+      "agricultura_i",
+      "historia_i",
+      "educacao_fisica_i",
+      "quimica_i",
+      "sociologia_i",
+      "lingua_portuguesa_i",
+      "laboratorio_de_ciencias_exatas",
+      "fisica_i",
+      "filosofia_i",
+      "ingles_i",
+      "introducao_aos_estudos_de_agropecuaria",
+      "geografia_i",
+      "biologia_i"
+    ],
+    "4": [
+      "laboratorio_de_ciencias_exatas",
+      "geografia_i"
+    ],
+    "5": [
+      "sociologia_i",
+      "fisica_i"
+    ],
+    "6": [
+      "matematica_i",
+      "agricultura_i",
+      "fisica_i"
+    ],
+    "7": [
+      "geodesia_e_construcoes_rurais",
+      "matematica_i",
+      "quimica_i",
+      "lingua_portuguesa_i",
+      "fisica_i"
+    ],
+    "8": [
+      "geodesia_e_construcoes_rurais",
+      "matematica_i",
+      "agricultura_i",
+      "historia_i",
+      "educacao_fisica_i",
+      "quimica_i",
+      "sociologia_i",
+      "lingua_portuguesa_i",
+      "laboratorio_de_ciencias_exatas",
+      "fisica_i",
+      "filosofia_i",
+      "ingles_i",
+      "introducao_aos_estudos_de_agropecuaria",
+      "geografia_i",
+      "biologia_i"
+    ],
+    "9": [
+      "geodesia_e_construcoes_rurais",
+      "matematica_i",
+      "quimica_i",
+      "sociologia_i",
+      "lingua_portuguesa_i",
+      "fisica_i",
+      "filosofia_i",
+      "ingles_i",
+      "introducao_aos_estudos_de_agropecuaria",
+      "geografia_i",
+      "biologia_i"
+    ],
+    "10": [
+      "matematica_i",
+      "quimica_i",
+      "fisica_i",
+      "geografia_i"
+    ],
+    "11": [
+      "fisica_i"
+    ],
+    "12": [
+      "sociologia_i",
+      "fisica_i"
+    ],
+    "13": [
+      "fisica_i"
+    ],
+    "14": [
+      "geodesia_e_construcoes_rurais",
+      "matematica_i",
+      "historia_i",
+      "quimica_i",
+      "sociologia_i",
+      "lingua_portuguesa_i",
+      "fisica_i",
+      "filosofia_i",
+      "ingles_i",
+      "biologia_i"
+    ],
+    "15": [
+      "geodesia_e_construcoes_rurais",
+      "matematica_i",
+      "agricultura_i",
+      "quimica_i",
+      "lingua_portuguesa_i",
+      "fisica_i",
+      "filosofia_i",
+      "biologia_i"
+    ],
+    "16": [
+      "matematica_i",
+      "historia_i",
+      "quimica_i",
+      "sociologia_i",
+      "lingua_portuguesa_i",
+      "fisica_i",
+      "filosofia_i",
+      "biologia_i"
+    ],
+    "17": [
+      "geodesia_e_construcoes_rurais",
+      "agricultura_i",
+      "historia_i",
+      "quimica_i",
+      "lingua_portuguesa_i",
+      "fisica_i",
+      "filosofia_i",
+      "biologia_i"
+    ],
+    "18": [
+      "lingua_portuguesa_i",
+      "fisica_i"
+    ],
+    "19": [
+      "quimica_i",
+      "sociologia_i",
+      "fisica_i",
+      "biologia_i"
+    ],
+    "20": [
+      "matematica_i",
+      "quimica_i"
+    ],
+    "21": [
+      "matematica_i",
+      "historia_i",
+      "quimica_i",
+      "lingua_portuguesa_i",
+      "laboratorio_de_ciencias_exatas",
+      "fisica_i",
+      "filosofia_i",
+      "geografia_i"
+    ],
+    "22": [
+      "quimica_i",
+      "fisica_i"
+    ],
+    "23": [
+      "historia_i",
+      "quimica_i",
+      "sociologia_i",
+      "lingua_portuguesa_i",
+      "fisica_i",
+      "filosofia_i"
+    ],
+    "24": [
+      "matematica_i",
+      "quimica_i",
+      "lingua_portuguesa_i"
+    ],
+    "25": [
+      "geodesia_e_construcoes_rurais",
+      "quimica_i",
+      "laboratorio_de_ciencias_exatas",
+      "fisica_i",
+      "biologia_i"
+    ]
+  },
+  "Alimentos": {
+    "0": [
+      "artes",
+      "praticas_agro"
+    ],
+    "1": [
+      "praticas_agro"
+    ],
+    "2": [
+      "praticas_agro"
+    ],
+    "3": [
+      "artes"
+    ],
+    "4": [
+      "artes",
+      "historia_i"
+    ],
+    "5": [
+      "fisica_i",
+      "artes",
+      "praticas_agro"
+    ],
+    "6": [
+      "matematica_i",
+      "microb_geral",
+      "lingua_portuguesa_i",
+      "filosofia_i",
+      "artes",
+      "inst_e_equip",
+      "praticas_agro",
+      "geografia_i",
+      "quimica_i",
+      "quimica_e_bioqu",
+      "ingles_i",
+      "historia_i"
+    ],
+    "7": [
+      "microb_geral",
+      "artes",
+      "praticas_agro",
+      "quimica_e_bioqu",
+      "historia_i"
+    ],
+    "8": [
+      "praticas_agro"
+    ],
+    "9": [
+      "microb_geral",
+      "fisica_i",
+      "artes",
+      "praticas_agro"
+    ],
+    "10": [
+      "matematica_i",
+      "microb_geral",
+      "fisica_i",
+      "artes",
+      "praticas_agro",
+      "ingles_i"
+    ],
+    "11": [
+      "matematica_i",
+      "microb_geral",
+      "fisica_i",
+      "artes",
+      "biologia_i",
+      "quimica_i",
+      "quimica_e_bioqu",
+      "historia_i"
+    ],
+    "12": [
+      "artes"
+    ],
+    "13": [
+      "matematica_i",
+      "microb_geral",
+      "fisica_i",
+      "artes",
+      "inst_e_equip",
+      "praticas_agro",
+      "quimica_i",
+      "quimica_e_bioqu",
+      "ingles_i",
+      "historia_i"
+    ],
+    "14": [
+      "artes",
+      "praticas_agro",
+      "ingles_i"
+    ],
+    "15": [
+      "artes",
+      "quimica_i"
+    ],
+    "16": [
+      "artes",
+      "praticas_agro"
+    ],
+    "17": [
+      "fisica_i",
+      "quimica_i"
+    ],
+    "18": [
+      "praticas_agro"
+    ],
+    "19": [
+      "artes",
+      "praticas_agro"
+    ],
+    "20": [
+      "artes"
+    ],
+    "21": [
+      "artes",
+      "praticas_agro"
+    ],
+    "22": [
+      "microb_geral",
+      "fisica_i",
+      "artes",
+      "biologia_i",
+      "quimica_i",
+      "quimica_e_bioqu"
+    ],
+    "23": [
+      "matematica_i",
+      "microb_geral",
+      "fisica_i",
+      "artes",
+      "praticas_agro",
+      "biologia_i",
+      "geografia_i",
+      "quimica_i",
+      "quimica_e_bioqu",
+      "historia_i"
+    ],
+    "24": [
+      "fisica_i",
+      "artes"
+    ],
+    "25": [
+      "educacao_fisica_i",
+      "microb_geral",
+      "quimica_i",
+      "ingles_i"
+    ],
+    "26": [
+      "praticas_agro"
+    ],
+    "27": [
+      "artes"
+    ],
+    "28": [
+      "fisica_i"
+    ]
+  },
+  "Informatica": {
+    "0": [
+      "fisica_i",
+      "introducao_a_algoritmos",
+      "matematica_i",
+      "historia_i",
+      "geografia_i",
+      "quimica_i"
+    ],
+    "1": [
+      "fisica_i"
+    ],
+    "2": [
+      "historia_i"
+    ],
+    "3": [
+      "fisica_i",
+      "banco_de_dados",
+      "quimica_i",
+      "sociologia_i"
+    ],
+    "4": [
+      "fisica_i"
+    ],
+    "5": [
+      "banco_de_dados"
+    ],
+    "6": [
+      "fisica_i",
+      "lingua_portuguesa_i",
+      "quimica_i"
+    ],
+    "7": [
+      "filosofia_i",
+      "lingua_portuguesa_i",
+      "banco_de_dados",
+      "laboratorio_de_ciencias_exatas",
+      "quimica_i"
+    ],
+    "8": [
+      "fisica_i",
+      "matematica_i",
+      "historia_i",
+      "banco_de_dados",
+      "montagem_e_manutencao_so",
+      "quimica_i",
+      "educacao_fisica_i"
+    ],
+    "9": [
+      "fisica_i",
+      "filosofia_i",
+      "quimica_i"
+    ],
+    "10": [
+      "fisica_i",
+      "filosofia_i",
+      "lingua_portuguesa_i",
+      "introducao_a_algoritmos",
+      "matematica_i",
+      "historia_i",
+      "geografia_i",
+      "banco_de_dados",
+      "biologia_i",
+      "montagem_e_manutencao_so",
+      "quimica_i",
+      "educacao_fisica_i"
+    ],
+    "11": [
+      "lingua_portuguesa_i",
+      "historia_i"
+    ],
+    "12": [
+      "fisica_i",
+      "lingua_portuguesa_i",
+      "introducao_a_algoritmos",
+      "matematica_i",
+      "historia_i",
+      "geografia_i",
+      "montagem_e_manutencao_so",
+      "quimica_i"
+    ],
+    "13": [
+      "fisica_i",
+      "introducao_a_algoritmos",
+      "historia_i",
+      "quimica_i"
+    ],
+    "14": [
+      "fisica_i",
+      "matematica_i",
+      "historia_i",
+      "geografia_i",
+      "quimica_i"
+    ]
+  },
+  "MeioAmbiente": {
+    "0": [
+      "quimica_i",
+      "educacao_fisica_i"
+    ],
+    "1": [
+      "quimica_i",
+      "matematica_i",
+      "fisica_i"
+    ],
+    "2": [
+      "matematica_i"
+    ],
+    "3": [
+      "lingua_portuguesa_i",
+      "fisica_i"
+    ],
+    "4": [
+      "quimica_i",
+      "geografia_i",
+      "matematica_i",
+      "ingles_i"
+    ],
+    "5": [
+      "geografia_i",
+      "fisica_i"
+    ],
+    "6": [
+      "quimica_i",
+      "matematica_i"
+    ],
+    "7": [
+      "quimica_i",
+      "lingua_portuguesa_i"
+    ],
+    "8": [
+      "quimica_i",
+      "bio_conser",
+      "educacao_fisica_i"
+    ],
+    "9": [
+      "quimica_i"
+    ],
+    "10": [
+      "laboratorio_de_ciencias_exatas",
+      "inf_bas",
+      "solos",
+      "matematica_i",
+      "fisica_i"
+    ],
+    "11": [
+      "quimica_i",
+      "geografia_i",
+      "matematica_i"
+    ],
+    "12": [
+      "quimica_i",
+      "lingua_portuguesa_i",
+      "solos",
+      "geografia_i",
+      "matematica_i",
+      "fisica_i",
+      "ingles_i"
+    ],
+    "13": [
+      "quimica_i",
+      "matematica_i",
+      "fisica_i"
+    ],
+    "14": [
+      "quimica_i",
+      "educacao_fisica_i",
+      "matematica_i"
+    ],
+    "15": [
+      "bio_conser"
+    ],
+    "16": [
+      "quimica_i",
+      "historia_i",
+      "bio_conser",
+      "filosofia_i",
+      "lingua_portuguesa_i",
+      "solos",
+      "educacao_fisica_i",
+      "geografia_i",
+      "matematica_i",
+      "biologia_i",
+      "fisica_i"
+    ],
+    "17": [
+      "quimica_i",
+      "lingua_portuguesa_i",
+      "geografia_i",
+      "fisica_i",
+      "ingles_i"
+    ],
+    "18": [
+      "matematica_i",
+      "fisica_i"
+    ],
+    "19": [
+      "quimica_i",
+      "geografia_i",
+      "matematica_i",
+      "biologia_i",
+      "fisica_i"
+    ],
+    "20": [
+      "quimica_i",
+      "inf_bas",
+      "solos",
+      "geografia_i",
+      "matematica_i",
+      "fisica_i",
+      "ingles_i"
+    ]
+  },
+  "Quimica": {
+    "0": [
+      "fisica_i"
+    ],
+    "1": [
+      "historia_i",
+      "artes"
+    ],
+    "2": [
+      "fisica_i",
+      "artes",
+      "educacao_fisica_i"
+    ],
+    "3": [
+      "artes"
+    ],
+    "4": [
+      "sociologia_i",
+      "toxicol_st",
+      "historia_i",
+      "artes"
+    ],
+    "5": [
+      "sociologia_i",
+      "artes",
+      "quimica_inorg",
+      "educacao_fisica_i"
+    ],
+    "6": [
+      "artes",
+      "educacao_fisica_i"
+    ],
+    "7": [
+      "artes"
+    ],
+    "8": [
+      "fisica_i",
+      "sociologia_i",
+      "matematica_i",
+      "historia_i",
+      "artes",
+      "geografia_i",
+      "quimica_inorg",
+      "educacao_fisica_i"
+    ],
+    "9": [
+      "artes"
+    ],
+    "10": [
+      "fisica_i",
+      "biologia_i",
+      "historia_i",
+      "artes",
+      "quimica_inorg",
+      "quimica_i"
+    ],
+    "11": [
+      "artes"
+    ],
+    "12": [
+      "fisica_i",
+      "sociologia_i",
+      "matematica_i",
+      "toxicol_st",
+      "historia_i",
+      "artes",
+      "quimica_inorg",
+      "quimica_i",
+      "educacao_fisica_i"
+    ],
+    "13": [
+      "fisica_i",
+      "filosofia_i",
+      "artes"
+    ],
+    "14": [
+      "fisica_i",
+      "biologia_i",
+      "matematica_i",
+      "historia_i",
+      "artes",
+      "educacao_fisica_i"
+    ],
+    "15": [
+      "fisica_i",
+      "tec_bas__lab",
+      "artes",
+      "educacao_fisica_i"
+    ],
+    "16": [
+      "fisica_i",
+      "artes"
+    ],
+    "17": [
+      "fisica_i",
+      "artes"
+    ],
+    "18": [
+      "artes"
+    ],
+    "19": [
+      "fisica_i",
+      "artes",
+      "quimica_inorg",
+      "quimica_i"
+    ],
+    "20": [
+      "fisica_i",
+      "historia_i",
+      "artes"
+    ],
+    "21": [
+      "fisica_i",
+      "biologia_i",
+      "sociologia_i",
+      "toxicol_st",
+      "historia_i",
+      "artes",
+      "quimica_inorg",
+      "quimica_i"
+    ],
+    "22": [
+      "artes",
+      "quimica_i"
+    ],
+    "23": [
+      "fisica_i",
+      "historia_i",
+      "artes"
+    ],
+    "24": [
+      "fisica_i",
+      "sociologia_i",
+      "artes"
+    ],
+    "25": [
+      "fisica_i",
+      "filosofia_i",
+      "sociologia_i",
+      "historia_i",
+      "artes"
+    ],
+    "26": [
+      "fisica_i",
+      "sociologia_i",
+      "artes"
+    ],
+    "27": [
+      "fisica_i",
+      "sociologia_i",
+      "historia_i",
+      "artes",
+      "geografia_i",
+      "quimica_inorg",
+      "quimica_i"
+    ],
+    "28": [
+      "fisica_i",
+      "sociologia_i",
+      "artes",
+      "quimica_inorg",
+      "quimica_i",
+      "educacao_fisica_i"
+    ],
+    "29": [
+      "artes"
+    ],
+    "30": [
+      "historia_i",
+      "artes"
+    ]
+  },
+  "Zootecnia": {
+    "0": [
+      "matematica_i"
+    ],
+    "1": [
+      "quimica_i",
+      "fisica_i"
+    ],
+    "2": [
+      "quimica_i",
+      "cunic_apicultura",
+      "sociologia_i"
+    ],
+    "3": [
+      "artes",
+      "quimica_i",
+      "historia_i",
+      "fisica_i",
+      "sociologia_i"
+    ],
+    "4": [
+      "quimica_i"
+    ],
+    "5": [
+      "artes",
+      "equi_cap_oni"
+    ],
+    "6": [
+      "artes",
+      "fisica_i",
+      "sociologia_i"
+    ],
+    "7": [
+      "artes",
+      "quimica_i",
+      "matematica_i",
+      "biologia_i",
+      "fisica_i",
+      "sociologia_i"
+    ],
+    "8": [
+      "artes",
+      "geografia_i",
+      "quimica_i",
+      "filosofia_i",
+      "equi_cap_oni",
+      "historia_i",
+      "laboratorio_de_ciencias_exatas",
+      "cunic_apicultura",
+      "matematica_i",
+      "fert_solo",
+      "biologia_i",
+      "intro_zoo",
+      "fisica_i",
+      "sociologia_i"
+    ],
+    "9": [
+      "quimica_i",
+      "cunic_apicultura",
+      "matematica_i",
+      "fisica_i"
+    ],
+    "10": [
+      "biologia_i",
+      "fisica_i"
+    ],
+    "11": [
+      "geografia_i",
+      "quimica_i",
+      "fisica_i"
+    ],
+    "12": [
+      "artes",
+      "geografia_i",
+      "quimica_i",
+      "equi_cap_oni",
+      "educacao_fisica_i",
+      "historia_i",
+      "cunic_apicultura",
+      "matematica_i",
+      "biologia_i",
+      "fisica_i",
+      "sociologia_i"
+    ],
+    "13": [
+      "quimica_i",
+      "matematica_i",
+      "fisica_i",
+      "sociologia_i"
+    ],
+    "14": [
+      "fisica_i"
+    ],
+    "15": [
+      "artes",
+      "quimica_i",
+      "equi_cap_oni",
+      "cunic_apicultura",
+      "matematica_i",
+      "biologia_i"
+    ],
+    "16": [
+      "cunic_apicultura",
+      "matematica_i"
+    ],
+    "17": [
+      "artes",
+      "quimica_i",
+      "equi_cap_oni",
+      "historia_i",
+      "cunic_apicultura",
+      "matematica_i",
+      "biologia_i",
+      "fisica_i",
+      "lingua_portuguesa_i",
+      "sociologia_i"
+    ],
+    "18": [
+      "cunic_apicultura",
+      "fisica_i",
+      "sociologia_i"
+    ],
+    "19": [
+      "artes",
+      "quimica_i",
+      "historia_i",
+      "cunic_apicultura",
+      "fisica_i",
+      "sociologia_i"
+    ],
+    "20": [
+      "matematica_i"
+    ],
+    "21": [
+      "artes",
+      "geografia_i",
+      "quimica_i",
+      "equi_cap_oni",
+      "educacao_fisica_i",
+      "cunic_apicultura",
+      "matematica_i",
+      "fert_solo",
+      "biologia_i",
+      "fisica_i",
+      "lingua_portuguesa_i",
+      "sociologia_i"
+    ],
+    "22": [
+      "artes",
+      "quimica_i",
+      "matematica_i",
+      "fisica_i",
+      "sociologia_i"
+    ],
+    "23": [
+      "artes",
+      "geografia_i",
+      "quimica_i",
+      "filosofia_i",
+      "equi_cap_oni",
+      "educacao_fisica_i",
+      "historia_i",
+      "laboratorio_de_ciencias_exatas",
+      "ingles_i",
+      "cunic_apicultura",
+      "matematica_i",
+      "fert_solo",
+      "biologia_i",
+      "intro_zoo",
+      "fisica_i",
+      "lingua_portuguesa_i",
+      "sociologia_i"
+    ],
+    "24": [
+      "artes",
+      "geografia_i",
+      "sociologia_i"
+    ],
+    "25": [
+      "artes",
+      "geografia_i",
+      "quimica_i",
+      "equi_cap_oni",
+      "educacao_fisica_i",
+      "historia_i",
+      "ingles_i",
+      "cunic_apicultura",
+      "matematica_i",
+      "fert_solo",
+      "biologia_i",
+      "fisica_i",
+      "lingua_portuguesa_i",
+      "sociologia_i"
+    ],
+    "26": [
+      "geografia_i",
+      "quimica_i",
+      "equi_cap_oni",
+      "historia_i",
+      "cunic_apicultura",
+      "fert_solo",
+      "fisica_i",
+      "sociologia_i"
+    ]
+  }
+}
