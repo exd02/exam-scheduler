@@ -1,0 +1,4 @@
+flet==0.28.3
+ortools==9.12.4544
+XlsxWriter==3.2.3
+openpyxl==3.1.5
