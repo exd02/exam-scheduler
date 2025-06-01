@@ -29,6 +29,14 @@ class RecoveryExtractor:
         e.control.border_color = ft.Colors.BLUE_800
         e.page.update()
 
+    def save(self, output_file: str, merged: dict[str, any]):
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(merged, f, ensure_ascii=False, indent=2)
+
+        self.page.open(
+            ft.SnackBar(ft.Text(f"Exportado '{output_file}' com sucesso!"), bgcolor=ft.Colors.GREEN_100)
+        )
+
     def make_sheet_info(self, filename: str) -> ft.Container:
         """
         Monta o container que pergunta:
@@ -265,15 +273,39 @@ class RecoveryExtractor:
                     extract_json(paths[idx], headers, firstRow, lastRow)
                 )
 
-            merged = merge_jsons(jsons)
             # grava no arquivo fixo “AlunosEmRecuperacao.json” na raiz de dados
             output_file = "dados/AlunosEmRecuperacao.json"
-            with open(output_file, "w", encoding="utf-8") as f:
-                json.dump(merged, f, ensure_ascii=False, indent=2)
+            merged = merge_jsons(jsons)
 
-            page.open(
-                ft.SnackBar(ft.Text(f"Exportado '{output_file}' com sucesso!"), bgcolor=ft.Colors.GREEN_100)
-            )
+            if Path(output_file).exists():
+                def overwrite(e: ft.ControlEvent):
+                    self.save(output_file, merged)
+                    dlg_modal.open = False
+                    page.update()
+                    page.open(ft.SnackBar(
+                        ft.Text(f"'{output_file}' sobrescrito com sucesso!"),
+                        bgcolor=ft.Colors.GREEN_100
+                    ))
+                
+                dlg_modal = ft.AlertDialog(
+                    modal=True,
+                    title=ft.Text("Confirmação"),
+                    content=ft.Text("Você tem certeza quer sobrescrever o arquivo \"dados/AlunosEmRecuperacao.json\" já existente?"),
+                    actions=[
+                        ft.TextButton("Sim", on_click=overwrite),
+                        ft.TextButton("Não", on_click=lambda e: page.close(dlg_modal)),
+                    ],
+                    actions_alignment=ft.MainAxisAlignment.END,
+                    on_dismiss=lambda e: print("Modal dialog dismissed!"),
+                )
+                page.open(dlg_modal)
+            else:
+                self.save(output_file, merged)
+                page.open(ft.SnackBar(
+                    ft.Text(f"Exportado '{output_file}' com sucesso!"),
+                    bgcolor=ft.Colors.GREEN_100
+                ))
+
             page.update()
 
         btn_load.on_click = on_load
