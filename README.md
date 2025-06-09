@@ -60,30 +60,30 @@ Este repositório contém três módulos principais que, em conjunto, permitem:
 
 ---
 
-## 2. Pré-requisitos e execução
+## 2. Pré-requisitos e Execução
 
 ### 2.1. Pré-requisitos
 - **Python 3.13.3**
     - Verifique a versão do seu python com o comando `python --version`
+- **Dependências**
+  1. Abra o **Prompt de Comando**  na raiz do projeto.
+  2. Crie e ative o ambiente virtual:
+      ```powershell
+      python -m venv .venv
+  
+      # Windows:
+      .venv\Scripts\activate
+  
+      # Linux/macOS
+      source .venv/bin/activate
+      ```
+  
+  3. Instale as dependências:
+      ```powershell
+      pip install -r requirements.txt
+      ```
 
-1. Abra o **Prompt de Comando**  na raiz do projeto.
-2. Crie e ative o ambiente virtual:
-    ```powershell
-    python -m venv .venv
-
-    # Windows:
-    .venv\Scripts\activate
-
-    # Linux/macOS
-    source .venv/bin/activate
-    ```
-
-3. Instale as dependências:
-    ```powershell
-    pip install -r requirements.txt
-    ```
-
-### 2.4. Executar a aplicação
+### 2.2. Execução
 1. Certifique-se de que os arquivos JSON brutos estejam na pasta `dados/`, por exemplo:
    - `dados/Horarios.json`
    - `dados/Dias.json`
