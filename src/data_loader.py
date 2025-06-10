@@ -39,7 +39,13 @@ class DataLoader:
 
     def _load_json(self, filename: str):
         path = self.base_path / filename
-        return json.loads(path.read_text(encoding="utf-8"))
+        if not path.exists():
+            if filename == "ExamesEmAula.json":
+                print(f"Aviso: Arquivo '{filename}' não encontrado. Iniciando com dados vazios para exames em aula.")
+                return {} 
+            else:
+                raise FileNotFoundError(f"Erro: Arquivo '{filename}' não encontrado em '{path}'. Este arquivo é essencial e não pode estar ausente.")
+        return json.loads(path.read_text(encoding="utf-8")) 
 
     def _load_all(self):
         # Carrega arquivos brutos
