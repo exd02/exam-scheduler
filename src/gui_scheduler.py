@@ -129,7 +129,7 @@ class GUIScheduler:
                                 self.selections[disc] = {idx}
                             refresh_rows()
 
-                        cell_content = ft.GestureDetector(content=txt, on_tap=on_tap)
+                        cell_content = ft.GestureDetector(content=txt, on_tap=on_tap, mouse_cursor=ft.MouseCursor.CLICK)
                     else:
                         cell_content = txt
 
