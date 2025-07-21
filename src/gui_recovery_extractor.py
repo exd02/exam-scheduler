@@ -190,7 +190,7 @@ class GUIRecoveryExtractor:
             expand=True,
         )
 
-        self.after_file_selected = ft.Column([], expand=True, visible=False)
+        self.after_file_selected = ft.Column([], expand=True, visible=False, scroll=ft.ScrollMode.ALWAYS)
         self.sheet_containers = []
 
         def switch_page(e: ft.ControlEvent):
