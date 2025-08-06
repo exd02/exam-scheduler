@@ -40,23 +40,36 @@ def run_scheduling():
 
 
 def main():
-    print("==============================================")
-    print("  1 → Construir AlunosEmRecuperacao.json (GUI)")
-    print("  2 → Agendar Exames em Sala (GUI)")
-    print("  3 → Construir planilhas de horário (Excel)")
-    print("==============================================")
-    choice = input("Digite 1, 2 ou 3 e pressione Enter: ").strip()
+    while True:
+        print("==============================================")
+        print("  1 → Construir AlunosEmRecuperacao.json (GUI)")
+        print("  2 → Agendar Exames em Sala (GUI)")
+        print("  3 → Construir planilhas de horário (Excel)")
+        print("  q → Sair")
+        print("==============================================")
+        choice = input("Digite 1, 2, 3 ou q e pressione Enter: ").strip()
 
-    if choice == "1":
-        gui_recovery = GUIRecoveryExtractor()
-        gui_recovery.run()
-    elif choice == "2":
-        gui_scheduler = GUIScheduler()
-        gui_scheduler.run()
-    elif choice == "3":
-        run_scheduling()
-    else:
-        print("Opção inválida. Rode novamente e digite '1', '2' ou '3'.")
+        if choice == "1":
+            gui_recovery = GUIRecoveryExtractor()
+            gui_recovery.run()
+            break
+        elif choice == "2":
+            try:
+                gui_scheduler = GUIScheduler()
+                gui_scheduler.run()
+                break
+            except Exception as e:
+                print(f"Erro ao executar opção 2: {e}")
+        elif choice == "3":
+            try:
+                run_scheduling()
+                break
+            except Exception as e:
+                print(f"Erro ao executar opção 3: {e}")
+        elif choice.lower() == "q":
+            break
+        else:
+            print("Opção inválida.")
 
 
 if __name__ == "__main__":
