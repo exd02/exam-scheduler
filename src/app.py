@@ -40,6 +40,14 @@ def run_scheduling():
 
 
 def main():
+    base_path = Path(__file__).parent.parent / "dados"
+    dias_path = base_path / "Dias.json"
+    horarios_path = base_path / "Horarios.json"
+
+    if not dias_path.exists() or not horarios_path.exists():
+        print("Erro: os arquivos 'dados/Dias.json' e 'dados/Horarios.json' devem existir antes de executar o programa.")
+        return
+
     while True:
         print("==============================================")
         print("  1 → Construir AlunosEmRecuperacao.json (GUI)")
@@ -70,6 +78,7 @@ def main():
             break
         else:
             print("Opção inválida.")
+
 
 
 if __name__ == "__main__":
